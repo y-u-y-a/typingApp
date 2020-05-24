@@ -20,10 +20,10 @@ export default {
   ** Customize the progress-bar color
   */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
+
+  /* <head>で読み込むファイルを指定 */
   css: [
+    './src/assets/sass/app.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -35,10 +35,10 @@ export default {
   */
   buildModules: [
   ],
-  /*
-  ** Nuxt.js modules
-  */
+
+  /* モジュール */
   modules: [
+    ['bootstrap-vue/nuxt', {css: false}]
   ],
   /*
   ** Build configuration

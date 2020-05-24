@@ -1,6 +1,7 @@
 
 export default {
   mode: 'universal',
+  srcDir: 'src/',   // 追加
   /*
   ** Headers of the page
   */

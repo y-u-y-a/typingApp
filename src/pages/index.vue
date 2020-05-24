@@ -1,18 +1,14 @@
 <template>
-  <div class="row justify-content-around bg-dark">
-    <h1 class="py-5">Bootstrapインストール成功</h1>
-  </div>
+  <Play />
 </template>
 
 <script>
 
+import Play from './Play.vue'
+
 export default {
+  components: {
+    Play
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-h1{
-  font-size: 24px;
-  color: #fff;
-}
-</style>

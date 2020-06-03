@@ -1,11 +1,13 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-@import './reset';
-@import './colors';
-@import './customs';
-@import './mixins';
+@import "./reset";
+@import "./colors";
+@import "./customs";
+@import "./mixins";
 
-body { background: $base; }
+body {
+  background: $base;
+}
 a:hover {
   color: $white;
   opacity: 0.7;

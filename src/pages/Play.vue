@@ -1,5 +1,5 @@
 <template>
-  <div id="play" class="d-flex justify-content-around">
+  <div id="play" class="row justify-content-around">
 
     <template v-if="!is_clicked_space">
       <div class="width-25 m-auto text-center">

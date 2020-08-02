@@ -1,8 +1,14 @@
-# typingApp
+# Dockerfileで構築
+## 1. Dockerfileからイメージ作成
+```
+$ docker build -t typing_app_frontend:latest .
+```
+## 2. イメージからコンテナ起動(run = create + start)
+```
+$ docker run --name typingApp_frontend -d -p 3000:80 typing_app_frontend:latest
+```
 
-> My first-class Nuxt.js project
-
-## Build Setup
+# Build Setup
 
 ```bash
 # ライブラリインストール
@@ -23,3 +29,7 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+
+# GCPのCloud Runにデプロイ

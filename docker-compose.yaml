@@ -2,9 +2,9 @@ version: "3"
 services:
   frontend:
     container_name: typingApp_frontend
+    # ここで指定した階層外のファイルは指定できない
     build:
       context: ./
-      dockerfile: Dockerfile
     ports:
       - 3001:80
 

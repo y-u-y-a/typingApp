@@ -5,9 +5,11 @@
 ## Build Setup
 
 ```bash
+# ライブラリインストール
 # install dependencies
 $ npm install
 
+# サーバー立ち上げ
 # serve with hot reload at localhost:3000
 $ npm run dev
 
@@ -15,6 +17,7 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
+# distディレクトリ生成
 # generate static project
 $ npm run generate
 ```

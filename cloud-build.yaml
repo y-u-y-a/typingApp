@@ -1,0 +1,10 @@
+steps:
+- name: gcr.io/cloud-builders/docker
+  # 実行コマンド？
+  args:
+    ['build','-f','Dockerfile','-t','gcr.io/typing-app-project/typing_app_frontend','.']
+# GCR上のイメージを指定
+images: ['gcr.io/typing-app-project/typing_app_frontend']
+
+
+# GCR用にイメージを作る必要！

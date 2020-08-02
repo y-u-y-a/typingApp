@@ -33,3 +33,20 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 
 # GCPのCloud Runにデプロイ
+## 1. GCRにイメージを登録する
+- `GCR用のイメージ名を作成`
+```
+$ docker tag typing_app_frontend gcr.io/typing-app-project/typing_app_frontend
+
+$ docker images
+>> gcr.io/typing-app-project/typing_app_frontend  latest  04b62eeba61d  36 minutes ago  23MB
+```
+- `GCR上にPush`
+```
+$ gcloud docker -- push gcr.io/typing-app-project/typing_app_frontend
+```
+
+## 2. Cloud Runへデプロイする
+```
+$ gcloud run deploy --image gcr.io/typing-app-project/typing_app_frontend --platform managed
+```

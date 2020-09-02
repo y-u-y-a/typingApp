@@ -2,22 +2,20 @@
 # ltsは安定版, alpineは軽量
 FROM node:lts-alpine as build-stage
 
-# 作業は/codeで実行
-RUN mkdir /code
 WORKDIR /code
+COPY ./ ./
 
-COPY ./package.json ./
-RUN npm install
-# 他のファイル群(/src, nuxt.config.jsは必須)
-COPY . .
-RUN npm run build
+# ファイル群(/src, package.json, nuxt.config.jsから本番用を生成)
+RUN npm install \
+    && npm run build \
+    && npm run generate
 
 
 
 # 本番環境
 FROM nginx:stable-alpine as production-stage
 
-# ビルド環境内で生成したdistディレクトリをマウント
+# ビルドした生成物/distをnginxに載せる
 COPY --from=build-stage /code/dist /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

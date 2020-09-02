@@ -1,12 +1,14 @@
 version: "3"
 services:
-  frontend:
-    container_name: typingApp_frontend
+  client:
+    container_name: typingApp_client
     # ここで指定した階層外のファイルは指定できない
     build:
       context: ./
+      dockerfile: Dockerfile
     ports:
-      - 3001:80
+      - 3000:80
+
 
 volumes:
   node-packages:

@@ -5,7 +5,7 @@ services:
     # ここで指定した階層外のファイルは指定できない
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     ports:
       - 3000:80
 
